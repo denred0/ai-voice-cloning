@@ -3,11 +3,12 @@
 git submodule init
 git submodule update --remote
 # setup venv
-python3 -m venv venv
-source ./venv/bin/activate
+#python3 -m venv venv
+#source ./venv/bin/activate
 python3 -m pip install --upgrade pip # just to be safe
 # CUDA
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
 # install requirements
 python3 -m pip install -r ./modules/tortoise-tts/requirements.txt # install TorToiSe requirements
 python3 -m pip install -e ./modules/tortoise-tts/ # install TorToiSe
@@ -15,6 +16,6 @@ python3 -m pip install -r ./modules/dlas/requirements.txt # instal DLAS requirem
 python3 -m pip install -e ./modules/dlas/ # install DLAS
 python3 -m pip install -r ./requirements.txt # install local requirements
 
-rm *.bat
+#rm *.bat
 
-deactivate
+#deactivate
